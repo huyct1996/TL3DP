@@ -1,0 +1,312 @@
+/* box-sizing : border-box; không làm thay đổi khi thêm border.. chỉ giảm content để thêm border vào */
+*
+{
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+body
+{
+	margin :  0;
+	padding:  0;
+
+}
+select {
+	height: 40px !important;
+}
+input {
+	height: 40px !important;
+}
+button {
+	text-transform: capitalize !important;
+	height: 40px;
+	font-size: 1.1vw !important;
+}
+.action
+{
+	margin-bottom: 10px !important;
+}
+.pagination
+{
+	display: flex !important;
+    justify-content: center;
+}
+.container-fuild
+{
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+/* HEARDER */
+.header-admin
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #fff;
+	width: 100%;
+	box-sizing: border-box;
+	z-index: 99;
+	border-bottom: 1px solid #c8ced3;
+}
+.header-admin .logo
+{
+	color: #212529;
+	height: 50px;
+	padding-left: 65px;
+	line-height: 50px;
+	font-size: 1.7vw;
+	float: left;
+	font-weight: bold;
+}
+.menu-toggle
+{
+	color : #212529;
+	float: left;
+	line-height: 50px;
+	font-size: 1.8vw;
+	cursor: pointer;
+	display: block;
+	margin-left: 50px;
+}
+/* drown-down */
+.welcome-admin
+{
+	float: right;
+	margin-right: 40px;
+	margin-top: 13px;
+	text-transform: uppercase;
+}
+.welcome-admin
+{
+	cursor: pointer;
+	font-size: 1vw;
+}
+.welcome-admin a:hover
+{
+	text-decoration: none;
+}
+.menu-admin {
+    left: -35px !important;
+    font-size: 1vw;
+}
+.menu-admin a
+{
+	text-align: center;
+}
+/* end drown down */
+
+/* Begin .nav-menu */
+
+.nav-menu
+{
+	position: fixed;
+	top: 50px;
+	background: #2f353a;
+	width: 250px;
+	height: 100vh;
+	margin-left: 0px;
+	transition: 0.5s;
+}
+.nav-menu.active
+{
+	margin-left: -250px;
+}
+.nav-menu .dashboard
+{
+	font-size: 14px; 
+	background: #3a4248;
+}
+.nav-menu .dashboard a:hover:before
+{
+	display: none;
+}
+.nav-menu ul
+{
+	transform: translate(0, 0);
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+.nav-menu ul li
+{
+	list-style: none;
+	position: relative;
+	display: block;
+}
+.nav-menu ul li.sub-menu.active
+{
+	display: block;
+}
+.nav-menu ul li.sub-menu a
+{
+	display: block;
+	text-decoration: none;
+	color: #fff;
+}
+.nav-menu ul li.sub-menu:before
+{
+	content: '\f0d7';
+	font-family: fontAwesome;
+	position: absolute;
+	line-height: 50px;
+	color: #fff;
+	right: 5px;
+	display: block;
+	z-index: 99;
+}
+.nav-menu ul li.active.sub-menu:before
+{
+	content: '\f0d8';
+}
+.nav-menu ul li ul
+{
+	position: relative;
+	left: 0;
+	background: rgb(38, 42, 46);
+	right: 0;
+	display: none;
+}
+/* .active {
+	background: #2196f3;
+} */
+.nav-menu ul li.active ul
+{
+	display: block;
+}
+
+.nav-menu ul li i
+{
+	margin-right: 7px;
+}
+.nav-menu ul li a
+{
+	position: relative;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 20px;
+	margin : 0;
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	overflow: hidden;
+	text-transform: capitalize; 
+	font-size: 1.1vw;
+}
+.nav-menu ul li a:hover
+{
+	color: #fff;
+	text-decoration: none;
+	background: #2196f3;
+}
+/* End .nav-menu */
+/* End header */
+
+/* Container-Content */
+.content.active
+{
+	margin-left: 0px;
+}
+.content
+{
+	margin-top: 50px;
+	display: block;
+	background: #fff;
+	height: 100vh;
+	margin-left: 250px;
+	transition: .5s;
+	font-size: 1.3vw;
+}
+.content-fuild
+{
+	padding: 0px 40px !important;
+}
+.border-content
+{
+
+}
+/* End Content */
+.title-content h2
+{
+	color: #162b86;
+	display: block;
+	font-size: 2.5vw;
+}
+
+/* The loai */
+.table-cate
+{
+	margin-top: 20px;
+}
+.table-cate th
+{
+	background: #5b97b4;
+	color: #fff;
+}
+.table-cate th, td
+{
+	padding: 15px !important;
+	font-size: 16px;
+}
+/* End The loai */
+/* Thong Ke */
+.statistical
+{
+	border: 2px solid black;
+	border-radius: 30px;
+	height: 180px;
+}
+.statistical .title-st
+{
+	text-align: center;
+	color: #07F;
+}
+/* End Thong Ke */
+/* Responsive */
+@media (max-width: 1129px)
+{
+	body
+	{
+		padding: 0;
+		margin: 0;
+	}
+	.header-admin
+	{
+		padding: 0;
+	}
+	.header-admin .logo
+	{
+		padding-left: 20px;
+	}
+	.menu-toggle
+	{
+		display: block;
+		padding-right: 20px;
+	}
+	.nav-menu
+	{
+		margin-left: -250px;
+	}
+	.nav-menu
+	{
+		text-transform: uppercase;
+	}
+	.nav-menu ul li
+	{
+		border-bottom: 1px solid rgba(0,0,0, .2);
+	}
+	.nav-menu ul li a
+	{
+		text-align: center;
+	}
+	.nav-menu.active
+	{
+		width: 100%;
+		height: 100vh;
+		margin-left: 0px;
+	}
+	.content
+	{
+		margin-left: 0px;
+	}
+}
+/* End Responsive
