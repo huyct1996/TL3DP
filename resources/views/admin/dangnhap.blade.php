@@ -26,7 +26,7 @@
 				<p>Mật khẩu</p>
 				<input type="password" name="txtPassword" placeholder="Vui lòng nhập mật khẩu">
 				<input type="submit" value="Đăng Nhập">
-				<a href="#">Quên mật khẩu?</a><br>
+				<a href="{{ route('password.request') }}">Quên mật khẩu?</a><br>
 			</form>
 	</div>
 </body>

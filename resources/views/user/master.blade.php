@@ -120,6 +120,7 @@
 		});
 	</script>
 	<!-- End Back To Top -->
+	{{-- Tìm Kiếm --}}
 	<script>
 		$(document).ready(function($) {
     var engine1 = new Bloodhound({
@@ -145,7 +146,7 @@
             },
             templates: {
                 empty: [
-                    '<div class="header-search">Tiêu Đề</div><div class="list-group search-results-dropdown"><div class="list-group-item">Nothing found.</div></div>'
+                    '<div class="header-search">Tiêu Đề</div><div class="list-group search-results-dropdown"><div class="list-group-item">Không có dữ liệu.</div></div>'
                 ],
                 header: [
                     '<div class="header-title">Tiêu Đề</div><div class="list-group search-results-dropdown"></div>'
@@ -157,6 +158,7 @@
         }
     ]);
 });
+// End Tìm Kiếm
 </script>
 </body>
 </html>
